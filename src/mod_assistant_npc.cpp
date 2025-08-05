@@ -23,17 +23,17 @@ bool Assistant::OnGossipSelect(Player* player, Creature* creature, uint32 sender
     if (action == ASSISTANT_GOSSIP_UTILITIES)
     {
         ClearGossipMenuFor(player);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, GOSSIP_UTILITIES_NAME, GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES + 1, GOSSIP_CONTINUE_TRANSACTION, NameChangeCost, false);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, GOSSIP_UTILITIES_APPEARANCE, GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES + 2, GOSSIP_CONTINUE_TRANSACTION, CustomizeCost, false);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, GOSSIP_UTILITIES_RACE, GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES + 3, GOSSIP_CONTINUE_TRANSACTION, RaceChangeCost, false);
-        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, GOSSIP_UTILITIES_FACTION, GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES + 4, GOSSIP_CONTINUE_TRANSACTION, FactionChangeCost, false);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want to change my name (500 Fragments of Northrend)", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES + 1, GOSSIP_CONTINUE_TRANSACTION, 0, false);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want to change my appearance (500 Fragments of Northrend)", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES + 2, GOSSIP_CONTINUE_TRANSACTION, 0, false);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want to change my race (500 Fragments of Northrend)", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES + 3, GOSSIP_CONTINUE_TRANSACTION, 0, false);
+        AddGossipItemFor(player, GOSSIP_ICON_VENDOR, "I want to change my faction (500 Fragments of Northrend)", GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES + 4, GOSSIP_CONTINUE_TRANSACTION, 0, false);
         SendGossipMenuFor(player, ASSISTANT_GOSSIP_TEXT, creature->GetGUID());
     }
     else if (action >= ASSISTANT_GOSSIP_UTILITIES + 1 && action <= ASSISTANT_GOSSIP_UTILITIES + 4)
     {
         ClearGossipMenuFor(player);
 
-        AtLoginFlags flag = AT_LOGIN_NONE;
+        AtLoginFlags flag = AT_LOGIN_NONE;                                                      
         uint32 cost = 0;
 
         switch (action)

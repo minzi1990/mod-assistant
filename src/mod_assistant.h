@@ -7,6 +7,8 @@
 #include "ScriptMgr.h"
 #include "ScriptedGossip.h"
 
+void Addmod_assistantScripts();
+
 enum
 {
     ASSISTANT_GOSSIP_UTILITIES       = 1000,
@@ -36,7 +38,6 @@ public:
 
     // WorldScript
     void OnAfterConfigLoad(bool /*reload*/) override;
-
 private:
     // Utilities
     bool UtilitiesEnabled;

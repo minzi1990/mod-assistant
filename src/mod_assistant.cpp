@@ -2,7 +2,7 @@
 
 Assistant::Assistant() : CreatureScript("npc_assistant"), WorldScript("AssistantWorldScript") {}
 
-void Addmod_assistantScripts()
+void void AddSC_mod_assistant()
 {
     new Assistant();
 }

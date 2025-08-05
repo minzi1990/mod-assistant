@@ -7,7 +7,7 @@ SET
 @MinLevel   := 30,
 @MaxLevel   := 30,
 @Faction    := 35,
-@NPCFlag    := 129,
+@NPCFlag    := 3,
 @Type       := 7,
 @FlagsExtra := 16777218,
 @Script     := "npc_assistant";

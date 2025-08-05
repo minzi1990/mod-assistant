@@ -2,8 +2,17 @@
 
 bool Assistant::OnGossipHello(Player* player, Creature* creature)
 {
+    uint32 welcomeQuestId = 70004; 
+    
+    // Check if player has completed the welcome quest
+    if (!player->GetQuestRewardStatus(welcomeQuestId))
+    {
+        return false; // This tells AzerothCore to use default quest handling
+    }
+    
+    
     ClearGossipMenuFor(player);
-
+    
     if (UtilitiesEnabled)
     {
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, GOSSIP_UTILITIES, GOSSIP_SENDER_MAIN, ASSISTANT_GOSSIP_UTILITIES);

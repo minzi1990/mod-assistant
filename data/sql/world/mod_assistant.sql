@@ -1,8 +1,8 @@
 SET
 @Entry      := 190003,
 @Model      := 16496,
-@Name       := "Gabriella Starwalker",
-@Title      := "Character Services",
+@Name       := "Lyra Shiftwhisper",
+@Title      := "Veil of Metamorphosis",
 @Icon       := "Speak",
 @MinLevel   := 30,
 @MaxLevel   := 30,

@@ -6,26 +6,27 @@
 #include "Player.h"
 #include "ScriptMgr.h"
 #include "ScriptedGossip.h"
+#include <string>
 
 void Addmod_assistantScripts();
 
 enum
 {
     ASSISTANT_GOSSIP_UTILITIES       = 1000,
-    ASSISTANT_GOSSIP_TEXT            = 48,
+    ASSISTANT_GOSSIP_TEXT            = 190001, // Changed from 48 to our custom text ID
     FRAGMENT_OF_NORTHREND_ID         = 60100
 };
 
-#define GOSSIP_UTILITIES "I want character services"
-#define GOSSIP_UTILITIES_NAME "I want to change my name"
-#define GOSSIP_UTILITIES_APPEARANCE "I want to change my appearance"
-#define GOSSIP_UTILITIES_RACE "I want to change my race"
-#define GOSSIP_UTILITIES_FACTION "I want to change my faction"
-#define GOSSIP_UTILITIES_IN_PROGRESS "You must complete the previously activated feature before trying to perform another."
-#define GOSSIP_UTILITIES_DONE "You can now log out to continue using the activated feature."
-#define GOSSIP_UTILITIES_NOT_ENOUGH_CURRENCY "You do not have enough Fragments of Northrend for this service."
+#define GOSSIP_UTILITIES "I wish to walk the ancient pathways of transformation"
+#define GOSSIP_UTILITIES_NAME "I wish to shed my current name"
+#define GOSSIP_UTILITIES_APPEARANCE "I desire to reshape my form"
+#define GOSSIP_UTILITIES_RACE "I seek to embrace a new lineage"
+#define GOSSIP_UTILITIES_FACTION "I would align myself with new allies"
+#define GOSSIP_UTILITIES_IN_PROGRESS "The pathways are already shifting around you. Complete your current transformation before attempting to walk another path."
+#define GOSSIP_UTILITIES_DONE "The ancient pathway opens before you. When next you awaken from rest, the transformation will be complete."
+#define GOSSIP_UTILITIES_NOT_ENOUGH_CURRENCY "The pathways require crystallized essence - Fragments of Northrend - which you do not possess in sufficient quantity."
 
-#define GOSSIP_CONTINUE_TRANSACTION "Do you wish to continue the transaction?"
+#define GOSSIP_CONTINUE_TRANSACTION "The pathway once opened cannot be unchanged. Do you truly wish to proceed?"
 
 class Assistant : public CreatureScript, WorldScript
 {
